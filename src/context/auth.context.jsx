@@ -7,7 +7,7 @@ const AuthContext = React.createContext();
 
 const API_URL = "http://localhost:5005";
 
-function AuthProviderWrapper() {
+function AuthProviderWrapper(props) {
     const [user, setUser] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 

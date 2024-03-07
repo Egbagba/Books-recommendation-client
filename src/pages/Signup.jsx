@@ -23,8 +23,9 @@ function Signup(){
         axios.post(`${API_URL}/auth/signup`, reqBody).then(()=>{
             navigate("/login");
         }).catch((error)=>{
-            const errorDescription = error.data.message;
-            setError(errorDescription);
+/*             const errorDescription = error.data.message;
+            setError(errorDescription); */
+            console.log(error)
         })
 
     }

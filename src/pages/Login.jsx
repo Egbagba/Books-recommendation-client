@@ -21,7 +21,7 @@ function Login() {
 
         axios.post(`${API_URL}/auth/login`, reqBody). then((response)=>{
             saveToken(response.data.authToken);
-            authenticateUser();
+            AuthenticateUser();
             navigate("/");
         })
         .catch ((error)=>{
