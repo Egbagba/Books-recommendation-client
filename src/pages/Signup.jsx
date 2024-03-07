@@ -61,7 +61,7 @@ function Signup(){
             />
           </div>
           <div>
-            <button type="submit">Sign Up</button>
+            <button type="submit">Create Account</button>
           </div>
           {error && <p>{error}</p>}
         </form>
