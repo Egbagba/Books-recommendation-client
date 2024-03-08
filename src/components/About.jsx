@@ -16,6 +16,10 @@ function About(){
                 and connect with us as we embark on this literary adventure together. 
                 Happy reading!
             </p>
+        <div>
+        <a href={`${"https://www.linkedin.com/in/egbagba-ese/"}`} target="_blank" rel="noopener noreferrer"><button>LinkedIn</button></a>
+        <a href={`${"https://github.com/Andr3L4"}`} target="_blank" rel="noopener noreferrer"><button>Github</button></a>
+        </div>    
         </div>
     )
 }

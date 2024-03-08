@@ -3,7 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-const AddBook = () => {
+function AddBook() {
+
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [description, setDescription] = useState("");
@@ -12,16 +13,20 @@ const AddBook = () => {
     const [image_placeholder, setImage] = useState("");
 
     const API_URL = "http://localhost:5005";
-
+ 
     const navigate = useNavigate();
-    const handleSubmit = (e) => {
+
+    function handleSubmit (e) {
         e.preventDefault();
+
         const book = { title, author, description, year, ratings, image_placeholder };
+
         if (!title || !author || !description || !year || !ratings || !image_placeholder) {
             alert("All the fields must be completed");
         } else {
+
             axios
-                .post(`${API_URL}/api/books`, book, {
+                .post(`${API_URL}/api/book`, book, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("authToken")}`
                     }
@@ -29,6 +34,7 @@ const AddBook = () => {
                 .then(() => navigate("/"))
                 .catch((error) => console.log(error));
         }
+
     }
     return (
         <>
@@ -73,7 +79,7 @@ const AddBook = () => {
                     onChange={(e) => setRatings(e.target.value)}
                     aria-required="true"
                 />
-                <label for="bookImage">Book Image: </label>
+                <label for="bookImage">Book_url: </label>
                 <input
                     id="bookImage"
                     type="text"

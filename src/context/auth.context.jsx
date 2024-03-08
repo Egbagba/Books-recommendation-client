@@ -18,7 +18,7 @@ function AuthProviderWrapper(props) {
 
 
     /** Function that authenticates the USER --> verifies if the token is a valid one */
-    const authenticatesUser = () => {
+    const authenticateUser = () => {
         const storedToken = localStorage.getItem("authToken");
 
         if (storedToken) {
@@ -51,7 +51,7 @@ function AuthProviderWrapper(props) {
     }
 
     return(
-        <AuthContext.Provider value={{isLoggedIn, user, saveToken, authenticatesUser, logOut}}>
+        <AuthContext.Provider value={{isLoggedIn, user, saveToken, authenticateUser, logOut}}>
             {props.children}
         </AuthContext.Provider>
     )

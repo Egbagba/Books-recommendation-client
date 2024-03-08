@@ -19,8 +19,7 @@ const Navbar = () => {
 
                     <Link to="/about"><button>About</button></Link>
 
-                    <Link to="/signup"><button>Signup</button> </Link>
-
+                   
                     <Link to="/addbookpage"><button>AddBookPage</button> </Link>
                 </div>
             </div>
