@@ -1,8 +1,20 @@
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate} from "react-router-dom";
+import { useContext } from 'react';
+import { AuthContext } from '../context/auth.context';
 
 function HomePage() {
+    const { isLoggedIn } = useContext(AuthContext);
+    const navigate = useNavigate();
 
+  const handleBooksRecommended = () => {
+    if (isLoggedIn) {
+      // User is authenticated, navigate to the Books Recommended page
+      navigate("/booklistpage");
+    } else {
+      // User is not authenticated, navigate to the sign-up page
+      navigate("/signup");
+    }
+  };
 
     return (
         <div>
@@ -15,9 +27,9 @@ function HomePage() {
                 journeys through the pages of our recommended books
             </p>
 
-            <div>
-                <Link to="/signup"><button>Signup</button></Link>
-                <Link to="/login"><button>Login</button></Link>
+            <button onClick={handleBooksRecommended}>Books Recommended</button>            <div>
+                {/* <Link to="/signup"><button>Signup</button></Link>
+                <Link to="/login"><button>Login</button></Link> */}
             </div>
         </div>
     )
