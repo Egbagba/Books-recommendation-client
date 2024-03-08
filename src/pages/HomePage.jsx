@@ -16,7 +16,7 @@ function HomePage() {
             </p>
 
             <div>
-                <Link>
+                <Link to="/booklistpage">
                 <button>Books Recommendations</button>
                 </Link>
             </div>

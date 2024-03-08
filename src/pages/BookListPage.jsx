@@ -8,11 +8,11 @@ function BookListPage(){
 
     const API_URL = "http://localhost:5005";
 
-    const [booklist, setBoolist] = useState([]);
+    const [booklist, setBooklist] = useState([]);
 
     useEffect(()=>{
         axios.get(`${API_URL}/booklist`)
-        .then((response)=> setBoolist(response.data))
+        .then((response)=> setBooklist(response.data))
         .catch((error)=> console.log(error))
     }, []);
 
@@ -44,7 +44,7 @@ function BookListPage(){
                   <div>
                     <p>{recommend.image_placeholder}</p>
                   </div>
-                    <Link to={`/booklist/${booklist.id}`}>
+                    <Link to={`/booklistpage/${booklist.id}`}>
                       <button>
                         Learn More
                       </button>
