@@ -38,7 +38,7 @@ function BookListDetailPage() {
                     <p>{books.description}</p>
                     <p>{books.year}</p>
                     <p>{books.ratings}</p>
-                    <p>{books.image_placeholder}</p>
+                    <img src={books.image_placeholder} alt={books.image} />
                     <Link to="/booklistpage"><button>Go To Book-List</button></Link>
                 </div>
             )}

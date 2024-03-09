@@ -1,65 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-// Initializing Context.
 const AuthContext = React.createContext();
-
 
 const API_URL = "http://localhost:5005";
 
 function AuthProviderWrapper(props) {
-    const [user, setUser] = useState("");
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    /** Save the login's JWT Token in our Browsers storage */
-    const saveToken = (token) => {
-        localStorage.setItem('authToken', token);
+  const saveToken = (token) => {
+    localStorage.setItem("authToken", token);
+  };
+
+  const authenticateUser = () => {
+    const storedToken = localStorage.getItem("authToken");
+
+    if (storedToken) {
+      axios
+        .get(`${API_URL}/auth/verify`, {
+          headers: { Authorization: `Bearer ${storedToken}` },
+        })
+        .then((response) => {
+          setUser(response.data);
+          setIsLoggedIn(true);
+        })
+        .catch(() => {
+          setUser(null);
+          setIsLoggedIn(false);
+        });
+    } else {
+      setUser(null);
+      setIsLoggedIn(false);
     }
+  };
 
+  const removeToken = () => {
+    localStorage.removeItem("authToken");
+  };
 
-    /** Function that authenticates the USER --> verifies if the token is a valid one */
-    const authenticateUser = () => {
-        const storedToken = localStorage.getItem("authToken");
+  // Use useNavigate for programmatic navigation
+  const navigate = useNavigate();
 
-        if (storedToken) {
-            axios.get(`${API_URL}/auth/verify`, {
-                headers: { Authorization: `Bearer ${storedToken}` }
-            })
-                .then((response) => {
-                    setUser(response.data);
-                    setIsLoggedIn(true);
+  const logOut = () => {
+    removeToken();
+    setUser(null);
+    setIsLoggedIn(false);
+    // Use navigate function to navigate to the desired route
+    navigate("/addbookpage");
+  };
 
-                })
-                .catch(()=>{
-                    setUser(null);
-                    setIsLoggedIn(false);
-                })
-        }
-        else {
-            setUser(null);
-            setIsLoggedIn(false);
-        }
-    };
+  useEffect(() => {
+    // When the component mounts, authenticate the user if a token is present
+    authenticateUser();
+  }, []); // Empty dependency array means this effect runs once, equivalent to componentDidMount
 
-    const removeToken = () =>{
-        localStorage.removeItem("authToken");
-    }
-
-    const logOut = () =>{
-        removeToken();
-        authenticatesUser();
-    }
-
-    return(
-        <AuthContext.Provider value={{isLoggedIn, user, saveToken, authenticateUser, logOut}}>
-            {props.children}
-        </AuthContext.Provider>
-    )
-
-
+  return (
+    <AuthContext.Provider value={{ isLoggedIn, user, saveToken, authenticateUser, logOut }}>
+      {props.children}
+    </AuthContext.Provider>
+  );
 }
 
-export {AuthProviderWrapper, AuthContext};
-
-    
-
+export { AuthProviderWrapper, AuthContext };

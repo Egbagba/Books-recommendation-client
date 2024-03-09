@@ -27,12 +27,12 @@ function BookListPage() {
               </div> */}
               <div>
                 <h3>{book.title}</h3>
-                <p>{book.author}</p>
+                {/* <p>{book.author}</p>
                 <p>{book.description}</p>
                 <p>{book.year}</p>
-                <p>{book.ratings}</p>
-                <p>{book.image_placeholder}</p>
-              </div>
+                <p>{book.ratings}</p> */}
+{/*                 <p>{book.image_placeholder}</p> I WANT THIS IMAGE TO APPEAR ONLY FROM THE BOOKLISTDETAILPAGE
+ */}              </div>
               <div>
                 <Link to={`/books/${book._id}`}>
                   <button>See Book</button>

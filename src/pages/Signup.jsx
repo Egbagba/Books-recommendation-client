@@ -24,16 +24,16 @@ function Signup(){
         axios.post(`${API_URL}/auth/signup`, reqBody).then(()=>{
             navigate("/login");
         }).catch((error)=>{
-/*             const errorDescription = error.data.message;
-            setError(errorDescription); */
-            console.log(error)
-        })
+           const errorDescription = error.data.message;
+            setError(errorDescription); 
+/*             console.log(error)
+ */        })
 
     }
 
     return (
       <div>
-        <h1>Sign-up Page</h1>
+        <h1>Sign up</h1>
         <form onSubmit={handleSignUpSubmit}>
           <div>
             <label>Email:</label>
@@ -63,7 +63,8 @@ function Signup(){
             />
           </div>
           <div>
-            <button type="submit">Sign Up</button>
+            <p>Create account to access recommended books</p>
+            <button type="submit">Sign In</button>
           </div>
           {error && <p>{error}</p>}
         </form>

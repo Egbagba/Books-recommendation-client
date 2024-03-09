@@ -9,7 +9,7 @@ import About from './components/About'
 import AddBookPage from './pages/AddBookPage'
 import BookListDetailPage from './pages/BookListDetailPage'
 import ErrorHandling from './pages/ErrorHandling'
-
+import ForgotPassword from './pages/ForgotPassword'
 
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/> 
+        <Route path="/forgotpassword" element={<ForgotPassword/>} />
         <Route path="/booklistpage" element={<BookListPage/>}/>
         <Route path="/books/:id" element={<BookListDetailPage />}/>
         <Route path="/addbookpage" element={<AddBookPage/>}/>

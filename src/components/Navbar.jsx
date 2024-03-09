@@ -1,30 +1,37 @@
-import React from 'react';
-import logo from "../assets/image/logo.png";
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from "../context/auth.context";
 
-const Navbar = () => {
-    return (
-        <nav>
-            <div>
-                <Link to="/">
-                    <img
-                        src={logo}
-                        alt="Your Books Recommendation"
-                    />
-                </Link>
-            </div>
-            <div>
-                <div>
-                    <Link to="/"><button>Home</button></Link>
+function Navbar() {
+  const { isLoggedIn, user, authenticateUser, logOut } = useContext(AuthContext);
 
-                    <Link to="/about"><button>About</button></Link>
+  const handleLogout = async () => {
+    // Call the logOut function which includes the logout request
+    await logOut();
+  };
 
-                    <Link to="/addbookpage"><button>AddBooks</button> </Link>
+  return (
+    <nav>
+      <Link to="/"><button>Home</button></Link>
 
-                </div>
-            </div>
-        </nav>
-    );
+      {isLoggedIn && (
+        <>
+          <Link to="/About"><button>About</button></Link>
+
+          {/*   UPDATE   */}
+          <button onClick={handleLogout}>Logout</button>
+          <span>{user.name}</span>
+        </>
+      )}
+
+      {!isLoggedIn && (
+        <>
+          <Link to="/signup"> <button>Sign Up</button> </Link>
+          <Link to="/login"> <button>Login</button> </Link>
+        </>
+      )}
+    </nav>
+  );
 }
 
 export default Navbar;

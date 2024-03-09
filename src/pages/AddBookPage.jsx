@@ -13,10 +13,10 @@ function AddBook() {
     const [image_placeholder, setImage] = useState("");
 
     const API_URL = "http://localhost:5005";
- 
+
     const navigate = useNavigate();
 
-    function handleSubmit (e) {
+    function handleSubmit(e) {
         e.preventDefault();
 
         const book = { title, author, description, year, ratings, image_placeholder };
@@ -88,6 +88,7 @@ function AddBook() {
                     aria-required="true"
                 />
                 <button type="submit" aria-label="Submit Book Details">Add Book</button>
+                <p>Login to add books</p>
             </form>
         </>
     )
