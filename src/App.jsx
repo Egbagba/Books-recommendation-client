@@ -11,6 +11,8 @@ import BookListDetailPage from './pages/BookListDetailPage'
 import ErrorHandling from './pages/ErrorHandling'
 import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
+import DeleteBookPage from './pages/DeleteBookPage'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/booklistpage" element={<BookListPage/>}/>
         <Route path="/books/:id" element={<BookListDetailPage />}/>
         <Route path="/addbookpage" element={<AddBookPage/>}/>
+        <Route path="/deletebookpage/:bookId" element={<DeleteBookPage/>}/>
+        <Route path="/footer" element={<Footer/>}/>
         <Route path='*' element={<ErrorHandling/>}/>
         
       </Routes>

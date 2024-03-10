@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const API_URL = "http://localhost:5005";
 
@@ -33,7 +32,6 @@ function Signup(){
 
     return (
       <div>
-        <h1>Sign up</h1>
         <form onSubmit={handleSignUpSubmit}>
           <div>
             <label>Email:</label>
@@ -65,6 +63,7 @@ function Signup(){
           <div>
             <p>Create account to access recommended books</p>
             <button type="submit">Sign In</button>
+
           </div>
           {error && <p>{error}</p>}
         </form>

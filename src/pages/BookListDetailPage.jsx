@@ -16,13 +16,13 @@ function BookListDetailPage() {
 
     // Get my Route Params, so I can use them
     const { id } = useParams();
-    const getBook = () =>{
+    const getBook = () => {
         axios.get(`${API_URL}/api/books/${id}`)
-        .then((response) => {
-            const getBook = response.data;
-            setBooks(getBook);
-        })
-        .catch((error) =>console.log(error));
+            .then((response) => {
+                const getBook = response.data;
+                setBooks(getBook);
+            })
+            .catch((error) => console.log(error));
     };
 
     useEffect(() => {
@@ -39,7 +39,8 @@ function BookListDetailPage() {
                     <p>{books.year}</p>
                     <p>{books.ratings}</p>
                     <img src={books.image_placeholder} alt={books.image} />
-                    <Link to="/booklistpage"><button>Go To Book-List</button></Link>
+                    <Link to="/booklistpage"><button>&#9664; Back</button></Link>
+                    <Link to={`/deletebookpage/${books._id}`}>Delete Book</Link>
                 </div>
             )}
         </div>

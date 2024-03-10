@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const API_URL = "http://localhost:5005";
 
@@ -32,7 +33,6 @@ function Login() {
 
     return (
             <div>
-                <h1>Login</h1>
                 <form onSubmit={handleLoginSubmit}>
                     <div>
                         <label>Email:</label>
@@ -44,6 +44,7 @@ function Login() {
                     </div>
                     <div>
                         <button type="submit">Login</button>
+                        <Link to="/forgot-password">Recover Password</Link>
                     </div>
                     {error && <p>{error}</p>}
                 </form>
