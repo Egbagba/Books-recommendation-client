@@ -10,6 +10,7 @@ import AddBookPage from './pages/AddBookPage'
 import BookListDetailPage from './pages/BookListDetailPage'
 import ErrorHandling from './pages/ErrorHandling'
 import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 
 
 function App() {
@@ -20,11 +21,12 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
-        <Route path='/errorhandling' element={<ErrorHandling />} />
+        <Route path='/errorhandling' element={<ErrorHandling />}/>
         <Route path="/about" element={<About />}></Route>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/> 
-        <Route path="/forgotpassword" element={<ForgotPassword/>} />
+        <Route path="/forgot-password" element={<ForgotPassword/>}/>
+        <Route path="/reset-password/:token" element={<ResetPassword />}/>
         <Route path="/booklistpage" element={<BookListPage/>}/>
         <Route path="/books/:id" element={<BookListDetailPage />}/>
         <Route path="/addbookpage" element={<AddBookPage/>}/>

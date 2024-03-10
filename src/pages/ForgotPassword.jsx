@@ -5,11 +5,14 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [resetRequested, setResetRequested] = useState(false);
 
+  const API_URL = "http://localhost:5005";
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Send a request to the backend to initiate password reset
-    axios.post("/auth/forgot-password", { email })
+    axios.post(`${API_URL}/auth/forgot-password`, { email })
       .then(() => {
         // Handle the response, e.g., show success message
         setResetRequested(true);
