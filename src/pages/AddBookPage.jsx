@@ -39,7 +39,7 @@ function AddBook() {
     return (
         <>
             <form onSubmit={handleSubmit} aria-label="Add Book Form">
-                <label for="bookTitle" >Book Title :</label>
+                <label >Book Title :</label>
                 <input
                     id="bookTitle"
                     type="text"
@@ -47,7 +47,7 @@ function AddBook() {
                     onChange={(e) => setTitle(e.target.value)}
                     aria-required="true"
                 />
-                <label for="bookAuthor"> Author :</label>
+                <label> Author :</label>
                 <input
                     id="bookAuthor"
                     type="text"
@@ -55,7 +55,7 @@ function AddBook() {
                     onChange={(e) => setAuthor(e.target.value)}
                     aria-required="true"
                 />
-                <label for="bookDescription">Book Description: </label>
+                <label >Book Description: </label>
                 <input
                     id="bookDescription"
                     type="text"
@@ -63,7 +63,7 @@ function AddBook() {
                     onChange={(e) => setDescription(e.target.value)}
                     aria-required="true"
                 />
-                <label for="bookYear">Book Year: </label>
+                <label>Book Year: </label>
                 <input
                     id="bookYear"
                     type="text"
@@ -71,7 +71,7 @@ function AddBook() {
                     onChange={(e) => setYear(e.target.value)}
                     aria-required="true"
                 />
-                <label for="bookRatings">Book Rating: </label>
+                <label >Book Rating: </label>
                 <input
                     id="bookRatings"
                     type="text"
@@ -79,7 +79,7 @@ function AddBook() {
                     onChange={(e) => setRatings(e.target.value)}
                     aria-required="true"
                 />
-                <label for="bookImage">Book_url: </label>
+                <label>Book_url: </label>
                 <input
                     id="bookImage"
                     type="text"

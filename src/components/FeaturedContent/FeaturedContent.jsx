@@ -19,6 +19,12 @@ const FeaturedContent = () => {
       description: 'Cross Origin Resource Sharing.',
       image: 'https://m.media-amazon.com/images/I/7160UerJ4kL._AC_UF1000,1000_QL80_.jpg', // Replace with actual image path
     },
+    /* {
+      id: '65eec75f246c01d7a7528cfc',
+      title: 'Moongoose',
+      description: 'Cross Origin Resource Sharing.',
+      image: 'https://m.media-amazon.com/images/I/7160UerJ4kL._AC_UF1000,1000_QL80_.jpg',
+    } */
     // Add more featured books as needed
   ];
 
@@ -27,6 +33,8 @@ const FeaturedContent = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1, // Adjust the number of visible slides
+    centerMode: true, // Enable center mode
+    centerPadding: '60px', // Adjust the padding for centering
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
