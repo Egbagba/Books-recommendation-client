@@ -3,11 +3,18 @@ import { useContext } from 'react';
 import { AuthContext } from '../context/auth.context';
 import React, { useState } from "react";
 import FeaturedContent from "../components/FeaturedContent/FeaturedContent";
+import UserPage from "../pages/UserPage"; // Import UserPage
+
 function HomePage() {
   const { isLoggedIn } = useContext(AuthContext);
   const [isAddBookVisible, setAddBookVisible] = useState(false);
   const navigate = useNavigate();
 
+  // Placeholder user data
+  const user = {
+    username: 'john_doe',
+    email: 'john.doe@example.com',
+  };
 
   const handleBooksRecommended = () => {
     if (isLoggedIn) {
@@ -19,15 +26,26 @@ function HomePage() {
     }
   };
 
-
   const handleAddBookClick = () => {
     setAddBookVisible(!isAddBookVisible);
     navigate('/addbookpage'); // Replace '/add-book' with the actual path of your AddBookPage
   };
 
-
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          zIndex: 1,
+          padding: '10px',
+          background: 'white',
+        }}
+      >
+        <UserPage user={user} />
+      </div>
+
       <FeaturedContent />
       <h2>Discover Your Next Favorite Read with Our Book Recommendations</h2>
 
@@ -41,7 +59,7 @@ function HomePage() {
       <button onClick={handleBooksRecommended}>Recommended Books</button>
       <button onClick={handleAddBookClick}>{isAddBookVisible ? 'Hide' : 'Add +'}</button>
     </div>
-  )
+  );
 }
 
 export default HomePage;

@@ -11,20 +11,20 @@ const FeaturedContent = () => {
       id: '65e89355255818943abbe850',
       title: 'Gone with the Wind',
       description: 'Epic romance set against the backdrop of the American Civil War.',
-      image: 'https://pictures.abebooks.com/inventory/30663736201.jpg', // Replace with actual image path
+      image: 'https://mockupcloud-themety.imgix.net/uploads/images/2022/04/08/05-book-soft-cover-mockup.jpg?auto=compress,format&fit=crop,max&h=780&w=1170', // Replace with actual image path
     },
     {
       id: '65eec75f246c01d7a7528cfc',
       title: 'Moongoose',
       description: 'Cross Origin Resource Sharing.',
-      image: 'https://m.media-amazon.com/images/I/7160UerJ4kL._AC_UF1000,1000_QL80_.jpg', // Replace with actual image path
+      image: 'https://mockupcloud-themety.imgix.net/uploads/images/2020/09/02/03-book-hard-cover-mockup.jpg?auto=compress,format&fit=crop,max&h=780&w=1170', // Replace with actual image path
     },
-    /* {
+    {
       id: '65eec75f246c01d7a7528cfc',
-      title: 'Moongoose',
+      title: 'Lost In the Beauty of Bad Weather',
       description: 'Cross Origin Resource Sharing.',
-      image: 'https://m.media-amazon.com/images/I/7160UerJ4kL._AC_UF1000,1000_QL80_.jpg',
-    } */
+      image: 'https://images.unsplash.com/photo-1612969308146-066d55f37ccb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    }
     // Add more featured books as needed
   ];
 
@@ -34,7 +34,7 @@ const FeaturedContent = () => {
     speed: 500,
     slidesToShow: 1, // Adjust the number of visible slides
     centerMode: true, // Enable center mode
-    centerPadding: '60px', // Adjust the padding for centering
+    centerPadding: '50px', // Adjust the padding for centering
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
