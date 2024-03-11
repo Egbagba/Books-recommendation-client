@@ -1,0 +1,13 @@
+/* FeaturedContent.css */
+.featured-slide {
+    height: 300px; /* Set a fixed height for the slider */
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .featured-slide img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  

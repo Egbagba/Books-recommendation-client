@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import { AuthContext } from '../context/auth.context';
 import React, { useState } from "react";
-
+import FeaturedContent from "../components/FeaturedContent/FeaturedContent";
 function HomePage() {
   const { isLoggedIn } = useContext(AuthContext);
   const [isAddBookVisible, setAddBookVisible] = useState(false);
@@ -28,6 +28,7 @@ function HomePage() {
 
   return (
     <div>
+      <FeaturedContent />
       <h2>Discover Your Next Favorite Read with Our Book Recommendations</h2>
 
       <p>Immerse yourself in captivating stories and timeless classics with

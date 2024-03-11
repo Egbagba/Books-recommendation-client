@@ -33,14 +33,14 @@ function BookListDetailPage() {
         <div>
             {books && (
                 <div>
-                    <h3>{books.title}</h3>
-                    <p>{books.author}</p>
-                    <p>{books.description}</p>
-                    <p>{books.year}</p>
-                    <p>{books.ratings}</p>
+                    <h3>Title: {books.title}</h3>
                     <img src={books.image_placeholder} alt={books.image} />
+                    <p>Author: {books.author}</p>
+                    <p>Description: {books.description}</p>
+                    <p>Year: {books.year}</p>
+                    <p>Ratings: {books.ratings}</p>
                     <Link to="/booklistpage"><button>&#9664; Back</button></Link>
-                    <Link to={`/deletebookpage/${books._id}`}>Delete Book</Link>
+                    <Link to={`/deletebookpage/${books._id}`}><button>Delete Book</button></Link>
                 </div>
             )}
         </div>
