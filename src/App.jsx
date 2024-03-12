@@ -24,7 +24,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path="/" element={user ? <UserPage user={user} /> : <HomePage />} />
+        
+        {/* Render UserPage conditionally */}
+        <Route
+          path="/"
+          element={user ? <UserPage user={user} /> : <HomePage />}
+        />
         <Route path="/errorhandling" element={<ErrorHandling />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />

@@ -20,8 +20,8 @@ function Navbar() {
 
           {/*   UPDATE   */}
           <button onClick={handleLogout}>Logout</button>
-          <span>{user.name}</span>
-        </>
+{/*           <span>{user.name}</span>
+ */}        </>
       )}
 
       {!isLoggedIn && (

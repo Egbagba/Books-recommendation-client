@@ -42,8 +42,8 @@ const FeaturedContent = () => {
 
   return (
     <div>
-      <h2>Featured Content</h2>
-      <Slider {...settings}>
+{/*       <h2>Featured Content</h2>
+ */}      <Slider {...settings}>
         {featuredBooks.map((book) => (
           <div key={book.id}>
             <img src={book.image} alt={book.title} />

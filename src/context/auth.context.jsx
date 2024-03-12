@@ -7,7 +7,8 @@ const AuthContext = React.createContext();
 const API_URL = "http://localhost:5005";
 
 function AuthProviderWrapper(props) {
-  const [user, setUser] = useState("");
+  // Set the default user state to an object with 'username' and 'email'
+  const [user, setUser] = useState({ username: "", email: "" });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const saveToken = (token) => {
@@ -23,15 +24,16 @@ function AuthProviderWrapper(props) {
           headers: { Authorization: `Bearer ${storedToken}` },
         })
         .then((response) => {
+          // Assuming the API response structure has a property 'user' containing 'username' and 'email'
           setUser(response.data);
           setIsLoggedIn(true);
         })
         .catch(() => {
-          setUser(null);
+          setUser({ username: "", email: "" });
           setIsLoggedIn(false);
         });
     } else {
-      setUser(null);
+      setUser({ username: "", email: "" });
       setIsLoggedIn(false);
     }
   };
@@ -45,7 +47,7 @@ function AuthProviderWrapper(props) {
 
   const logOut = () => {
     removeToken();
-    setUser(null);
+    setUser({ username: "", email: "" });
     setIsLoggedIn(false);
     // Use navigate function to navigate to the desired route
     navigate("/addbookpage");
