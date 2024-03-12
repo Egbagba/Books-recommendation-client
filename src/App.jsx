@@ -15,6 +15,7 @@ import ResetPassword from './pages/ResetPassword'
 import DeleteBookPage from './pages/DeleteBookPage'
 import Footer from './components/Footer'
 import UserPage from './pages/UserPage'
+import UpdateBookPage from './pages/UpdateBookPage';
 
 function App() {
   const [user, setUser] = useState(true);
@@ -40,6 +41,7 @@ function App() {
         <Route path="/books/:id" element={<BookListDetailPage />} />
         <Route path="/addbookpage" element={<AddBookPage />} />
         <Route path="/deletebookpage/:bookId" element={<DeleteBookPage />} />
+        <Route path="/updatebookpage" element={<UpdateBookPage />}/>
         <Route path="/footer" element={<Footer />} />
         <Route path="*" element={<ErrorHandling />} />
       </Routes>

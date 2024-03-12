@@ -59,7 +59,8 @@ const DeleteBookPage = () => {
 
             <button onClick={deleteBook}>Confirm Delete</button>
             {deleteStatus && <p>{deleteStatus}</p>}
-            <Link to="/booklistpage/"><button>&#9664; Back</button></Link>
+            <Link to="/booklistpage"><button>&#9664; Back</button></Link>
+            <Link to="/updatebookpage"><button>Update Book</button></Link> 
         </div>
     );
 };
