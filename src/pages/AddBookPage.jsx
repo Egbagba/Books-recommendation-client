@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-function AddBook() {
+function AddBookPage() {
 
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
@@ -93,4 +93,4 @@ function AddBook() {
         </>
     )
 }
-export default AddBook;
+export default AddBookPage;

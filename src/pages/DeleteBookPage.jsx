@@ -45,7 +45,8 @@ const DeleteBookPage = () => {
         <div>
             <h2>Delete Book</h2>
 
-            {book && (
+            {book && 
+            <article>
                 <div>
                     <h3>Book Details</h3>
                     <p>Title: {book.title}</p>
@@ -55,12 +56,12 @@ const DeleteBookPage = () => {
                     <p>Ratings: {book.ratings}</p>
                     <img src={book.image_placeholder} alt={book.image} />
                 </div>
-            )}
-
-            <button onClick={deleteBook}>Confirm Delete</button>
-            {deleteStatus && <p>{deleteStatus}</p>}
-            <Link to="/booklistpage"><button>&#9664; Back</button></Link>
-            <Link to="/updatebookpage"><button>Update Book</button></Link> 
+                 <button onClick={deleteBook}>Confirm Delete</button>
+                 {deleteStatus && <p>{deleteStatus}</p>}
+                 <Link to="/booklistpage"><button>&#9664; Back</button></Link>
+                 <Link to={`/updatebookpage/${book._id}`}><button>Update Book</button></Link> 
+                 </article>
+            }
         </div>
     );
 };

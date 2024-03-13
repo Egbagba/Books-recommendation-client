@@ -3,7 +3,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './FeaturedContent.css';
+import "./FeaturedContent.css"
 
 const FeaturedContent = () => {
   const featuredBooks = [
@@ -41,9 +41,8 @@ const FeaturedContent = () => {
   };
 
   return (
-    <div>
-{/*       <h2>Featured Content</h2>
- */}      <Slider {...settings}>
+    <div className='feature-slide-img'>
+        <Slider {...settings}>
         {featuredBooks.map((book) => (
           <div key={book.id}>
             <img src={book.image} alt={book.title} />

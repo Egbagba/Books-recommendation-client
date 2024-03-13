@@ -4,6 +4,7 @@ import { AuthContext } from '../context/auth.context';
 import React, { useState } from "react";
 import FeaturedContent from "../components/FeaturedContent/FeaturedContent";
 import UserPage from "../pages/UserPage"; // Import UserPage
+import Footer from "../components/Footer";
 
 function HomePage() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -45,11 +46,10 @@ function HomePage() {
       >
         <UserPage user={user} />
       </div>
-
       <FeaturedContent />
-      <h2>Discover Your Next Favorite Read with Our Book Recommendations</h2>
+      <h2 className=" text-3xl m-60">Discover Your Next Favorite Read with Our Book Recommendations</h2>
 
-      <p>Immerse yourself in captivating stories and timeless classics with
+      <p className="mb-20">Immerse yourself in captivating stories and timeless classics with
         our curated book recommendations. Whether you're a fan of romance,
         mystery, or historical fiction, our carefully selected list has something
         for every avid reader. Explore the literary world and embark on exciting
@@ -58,6 +58,7 @@ function HomePage() {
 
       <button onClick={handleBooksRecommended}>Recommended Books</button>
       <button onClick={handleAddBookClick}>{isAddBookVisible ? 'Hide' : 'Add +'}</button>
+      <Footer />
     </div>
   );
 }

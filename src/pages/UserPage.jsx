@@ -26,6 +26,7 @@ const UserPage = () => {
                     <button onClick={toggleDropdown}>
                         User Information {user ? user.username : ''}
                     </button>
+                    
 
                     {/* Dropdown Content */}
                     {isDropdownOpen && (
@@ -34,7 +35,9 @@ const UserPage = () => {
                                 <>
                                     <p>Username: {user.name}</p>
                                     <p>Email: {user.email}</p>
+                                    
                                 </>
+                                
                             )}
                         </div>
                     )}

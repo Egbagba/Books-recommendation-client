@@ -12,16 +12,16 @@ function Navbar() {
 
   return (
     <nav>
-      <Link to="/"><button>Home</button></Link>
+      <div className='navbar bg-base-100'>
+      <Link to="/"><button className='btn btn-ghost text-l text-gray font-bold'>Home</button></Link>
 
       {isLoggedIn && (
         <>
-          <Link to="/About"><button>About</button></Link>
+          <Link to="/About"><button className='text-gray font-bold btn btn-ghost text-l'>About</button></Link>
 
           {/*   UPDATE   */}
-          <button onClick={handleLogout}>Logout</button>
-{/*           <span>{user.name}</span>
- */}        </>
+          <button className='text-gray font-bold btn btn-ghost text-l' onClick={handleLogout}>Logout</button>
+        </>
       )}
 
       {!isLoggedIn && (
@@ -30,6 +30,7 @@ function Navbar() {
           <Link to="/login"> <button>Login</button> </Link>
         </>
       )}
+      </div>
     </nav>
   );
 }

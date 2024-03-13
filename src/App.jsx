@@ -25,8 +25,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        
-        {/* Render UserPage conditionally */}
         <Route
           path="/"
           element={user ? <UserPage user={user} /> : <HomePage />}
@@ -41,7 +39,7 @@ function App() {
         <Route path="/books/:id" element={<BookListDetailPage />} />
         <Route path="/addbookpage" element={<AddBookPage />} />
         <Route path="/deletebookpage/:bookId" element={<DeleteBookPage />} />
-        <Route path="/updatebookpage" element={<UpdateBookPage />}/>
+        <Route path="/updatebookpage/:id" element={<UpdateBookPage />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="*" element={<ErrorHandling />} />
       </Routes>
