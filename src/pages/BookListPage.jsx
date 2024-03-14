@@ -30,7 +30,7 @@ function BookListPage() {
                   background: 'white',
                 }}
               >
-                <UserPage />
+              <UserPage />
               </div>
               <div>
                 <div className="card w-80 mb-1 bg-neutral text-neutral-content">
@@ -43,9 +43,9 @@ function BookListPage() {
                 </div>
               </div>
             </div>
-            <button>
+            <article className="fixed bottom-0 left-0 p-4">
             <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
-            </button>
+            </article>
           </div>
         ))}
     </div>
