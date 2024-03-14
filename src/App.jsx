@@ -15,7 +15,7 @@ import DeleteBookPage from './pages/DeleteBookPage'
 import Footer from './components/Footer'
 import UserPage from './pages/UserPage'
 import UpdateBookPage from './pages/UpdateBookPage';
-import HomePage from './pages/Homepage'
+import HomePage from './pages/HomePage'
 
 function App() {
   const [user, setUser] = useState(true);
