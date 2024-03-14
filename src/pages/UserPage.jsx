@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import { useContext } from 'react';
 import { AuthContext } from '../context/auth.context';
+import { Link } from 'react-router-dom';
 
 const UserPage = () => {
     const { user, isLoggedIn, authenticateUser } = useContext(AuthContext);
@@ -35,6 +36,11 @@ const UserPage = () => {
                                 <>
                                     <p className='font-semibold'>Username: {user.name}</p>
                                     <p className='font-semibold'>Email: {user.email}</p>
+                                    <div className='mt-3 space-x-4'>
+                                    <Link to="/signup"><button className="btn btn-sm btn-outline rounded-md">Sign-Up</button></Link>
+                                    <Link to="/login"><button className="btn btn-sm btn-outline rounded-md">Log-In</button></Link>
+                                    </div>
+
                                     
                                 </>
                                 

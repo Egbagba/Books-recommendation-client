@@ -47,19 +47,20 @@ function HomePage() {
       >
         <UserPage user={user} />
       </div>
-      <div className="background-colo">
+      <div className="">
         <div>
           <FeaturedContent />
         </div>
         <div>
-          <h2 className="text-3xl font-bold m-60 mt-20">Discover Your Next Favorite Read with Our Book Recommendations</h2>
+          <h2 className="text-3xl font-bold m-60 mt-20 text-stone-400">Discover Your Next Favorite Read with Our Book Recommendations</h2>
         </div>
         <div>
-          <p className="text-xl font-semibold m-20">Immerse yourself in captivating stories and timeless classics with
-            our curated book recommendations. Whether you're a fan of romance,
-            mystery, or historical fiction, our carefully selected list has something
+          <p className="text-xl font-semibold m-20 text-purple-900">Immerse yourself in captivating stories and timeless classics with
+            our curated book recommendations. 
+            <br/>
+            Whether you're a fan of romance,mystery, or historical fiction, our carefully selected list has something
             for every avid reader. Explore the literary world and embark on exciting
-            journeys through the pages of our recommended books
+            journeys through the pages of our recommended books below.
           </p>
         </div>
         <div className="flex justify-center space-x-10">
@@ -70,7 +71,7 @@ function HomePage() {
       </div>
     </div>
   );
-  
+
 }
 
 export default HomePage;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import UserPage from './UserPage';
 
 const ResetPassword = () => {
   const { token } = useParams();
@@ -43,18 +44,32 @@ const ResetPassword = () => {
   return (
     <div>
       <h2>Reset Password</h2>
-      <label htmlFor="newPassword">New Password:</label>
-      <input
-        type="password"
-        id="newPassword"
-        value={newPassword}
-        onChange={(e) => setNewPassword(e.target.value)}
-      />
-      <button onClick={handleResetPassword}>Reset Password</button>
+      <div style={{ position: 'relative' }}>
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            zIndex: 1,
+            padding: '10px',
+            background: 'white',
+          }}
+        >
+          <UserPage />
+        </div>
+        <label>New Password:</label>
+        <input
+          type="password"
+          id="newPassword"
+          value={newPassword}
+          onChange={(e) => setNewPassword(e.target.value)}
+        />
+        <button onClick={handleResetPassword}>Reset Password</button>
 
-      {resetStatus && <p>{resetStatus}</p>}
-    </div>
-  );
+        {resetStatus && <p>{resetStatus}</p>}
+      </div>
+      </div>
+    );
 };
 
 export default ResetPassword;
