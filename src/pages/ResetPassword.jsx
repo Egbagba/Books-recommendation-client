@@ -9,7 +9,7 @@ const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState('');
   const [resetStatus, setResetStatus] = useState(null);
 
-  const API_URL = "http://localhost:5005";
+  const API_URL = "https://books-recommendation-server.onrender.com";
 
   const generateResetToken = () => {
     // Use the uuid library to generate a unique token

@@ -4,7 +4,7 @@ import axios from "axios";
 import UserPage from "./UserPage";
 
 function BookListPage() {
-  const API_URL = "http://localhost:5005";
+  const API_URL = "https://books-recommendation-server.onrender.com";
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function BookListPage() {
     <div>
       {books &&
         books.map((book) => (
-          <div key={book._id} className="flex flex-row items-center">
+          <div key={book._id} className="flex ">
             <div style={{ position: 'relative' }}>
               <div
                 style={{
@@ -32,13 +32,15 @@ function BookListPage() {
               >
                 <UserPage />
               </div>
-              <div className="card w-80 mb-1 bg-neutral text-neutral-content">
-                <h3 className="card-title font-semibold mt-3">{book.title}</h3>
-              </div>
-              <div className="card-actions justify-center">
-                <Link to={`/books/${book._id}`}>
-                  <button className="btn btn-outline btn-success mb-3">See Book</button>
-                </Link>
+              <div>
+                <div className="card w-80 mb-1 bg-neutral text-neutral-content">
+                  <h3 className="card-title font-semibold mt-3">{book.title}</h3>
+                </div>
+                <div className="card-actions justify-center">
+                  <Link to={`/books/${book._id}`}>
+                    <button className="btn btn-outline btn-success mb-3">See Book</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

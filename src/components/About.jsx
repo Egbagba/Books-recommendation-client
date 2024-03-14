@@ -28,7 +28,7 @@ function About() {
          </div> */
     return (
 
-        <div className='bg-[url("https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen'>
+        <div className='bg-[url("https://images.pexels.com/photos/4219038/pexels-photo-4219038.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
 
             <div style={{ position: 'relative' }}>
                 <div
@@ -41,13 +41,13 @@ function About() {
                         background: 'white',
                     }}
                 >
-                    <UserPage/>
+                    <UserPage />
                 </div>
                 <div>
-                    <h3 className="text-xl m-20">Welcome to our Book Recommendation Web Application!</h3>
+                    <h3 className="text-xl font-serif font-bold m-20">Welcome to our Book Recommendation Web Application!</h3>
                 </div>
 
-                <div className="mt-8 text-center mb-10 text-white text-3xl semibold" >
+                <div className="mt-8 text-center font-mono mb-10 text-gray text-2xl semibold" >
                     <p>Here, we are dedicated to creating an immersive literary
                         experience tailored just for you. Our platform is designed
                         to foster a love for reading by providing personalized book
@@ -59,14 +59,16 @@ function About() {
                     </p>
                 </div>
 
-                <div>
-                    <a href={`${"https://github.com/Egbagba"}`} target="_blank"><button>Ese Egbagba</button></a>
-                    <a href={`${"https://github.com/Andr3L4"}`} target="_blank"><button>Andre SR</button></a>
-                    <div className="mt-20 footer footer-center">
-                        < Footer />
+                <div className="flex justify-between mt-10 px-6">
+                    <div className="space-x-6 mt-20">
+                        <a href={`${"https://github.com/Egbagba"}`}><button className="btn btn-outline btn-success">Ese Egbagba</button></a>
+                        <a href={`${"https://github.com/Andr3L4"}`}><button className="btn btn-outline btn-warning">Andre SR</button></a>
+                        <div className="mt-20 footer footer-center">
+                        </div>
                     </div>
                 </div>
             </div>
+            < Footer />
         </div>
     )
 }

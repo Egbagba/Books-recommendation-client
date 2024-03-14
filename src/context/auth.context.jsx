@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const AuthContext = React.createContext();
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://books-recommendation-server.onrender.com";
 
 function AuthProviderWrapper(props) {
   // Set the default user state to an object with 'username' and 'email'

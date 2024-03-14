@@ -14,7 +14,7 @@ function UpdateBookPage() {
     const [url, setUrl] = useState("");
     const { id } = useParams();
     const navigate = useNavigate();
-    const API_URL = "http://localhost:5005";
+    const API_URL = "https://books-recommendation-server.onrender.com";
 
 
     const getBook = () => {
@@ -143,7 +143,7 @@ function UpdateBookPage() {
                                     />
                                 </label>
                             </div>
-                            <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Update Book</button>
+                            <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-gray capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Update Book</button>
                         </form>
                         <Footer />
                     </div>

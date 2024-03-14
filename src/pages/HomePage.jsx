@@ -52,10 +52,10 @@ function HomePage() {
           <FeaturedContent />
         </div>
         <div>
-          <h2 className="text-3xl font-bold m-60 mt-20 text-stone-400">Discover Your Next Favorite Read with Our Book Recommendations</h2>
+          <h2 className="text-3xl font-bold font-serif m-60 mt-20 text-stone-400">Discover Your Next Favorite Read with Our Book Recommendations</h2>
         </div>
         <div>
-          <p className="text-xl font-semibold m-20 text-purple-900">Immerse yourself in captivating stories and timeless classics with
+          <p className="text-xl font-semibold font-mono m-20 text-purple-900">Immerse yourself in captivating stories and timeless classics with
             our curated book recommendations. 
             <br/>
             Whether you're a fan of romance,mystery, or historical fiction, our carefully selected list has something
@@ -64,8 +64,8 @@ function HomePage() {
           </p>
         </div>
         <div className="flex justify-center space-x-10">
-          <button className="btn btn-outline btn-warning px-4 py-4 rounded" onClick={handleBooksRecommended}>Recommended Books</button>
-          <button className="btn btn-outline btn-info px-4 py-2 rounded" onClick={handleAddBookClick}>{isAddBookVisible ? 'Hide' : 'Add +'}</button>
+          <button className="btn btn-outline btn-warning px-4 py-4 rounded-xl" onClick={handleBooksRecommended}>Recommended Books</button>
+          <button className="btn btn-outline btn-info px-4 py-2 rounded-xl" onClick={handleAddBookClick}>{isAddBookVisible ? 'Hide' : 'Add +'}</button>
         </div>
         <Footer />
       </div>

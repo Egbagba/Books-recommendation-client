@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import UserPage from "./UserPage";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://books-recommendation-server.onrender.com";
+
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -80,20 +81,20 @@ function Login() {
                                 />
                             </div>
                             <div className="mt-8 md:flex md:items-center md:justify-between">
-                                <button type="submit" className="w-full md:w-auto px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Login</button>
+                                <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-gray capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Login</button>
                                 <Link to="/forgot-password" className="mt-4 md:mt-0 text-blue-500 hover:text-blue-700">Recover Password</Link>
                             </div>
                             {error && <p className="text-red-500 mt-4">{error}</p>}
                         </form>
                         <Footer />
                     </div>
-                    </div>
                 </div>
             </div>
-            );
+        </div>
+    );
 
 
 }
 
 
-            export default Login;
+export default Login;

@@ -3,7 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer"
 import UserPage from "./UserPage";
-const API_URL = "http://localhost:5005";
+const API_URL = "https://books-recommendation-server.onrender.com";
+/* 
+const API_URL = "http://localhost:5005"; */
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -34,22 +36,22 @@ function Signup() {
   return (
     <div className='flex justify-center items-center'>
       <div className='w-full max-w-lg mx-auto overflow-hidden bg-white rounded-lg dark:bg-gray-800 shadow-lg hover:shadow-xl'>
-      <div style={{ position: 'relative' }}>
-              <div
-                style={{
-                  position: 'fixed',
-                  top: 0,
-                  right: 0,
-                  zIndex: 1,
-                  padding: '10px',
-                  background: 'white',
-                }}
-              >
-                <UserPage />
-              </div>
-        <div className="px-6 py-4">
-          <div className="flex justify-center mx-auto">
-            <img className="mt-6 w-48 h-auto sm:w-64 sm:h-auto" src="https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=600" alt="book-image" />
+        <div style={{ position: 'relative' }}>
+          <div
+            style={{
+              position: 'fixed',
+              top: 0,
+              right: 0,
+              zIndex: 1,
+              padding: '10px',
+              background: 'white',
+            }}
+          >
+            <UserPage />
+          </div>
+          <div className="px-6 py-4">
+            <div className="flex justify-center mx-auto">
+              <img className="mt-6 w-48 h-auto sm:w-64 sm:h-auto" src="https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=600" alt="book-image" />
             </div>
             <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Welcome</h3>
             <p className="mt-1 text-gray-500 dark:text-gray-400 text-center font-semibold">Sign up & create account</p>
@@ -95,7 +97,7 @@ function Signup() {
                 </label>
               </div>
               <div className="flex items-center justify-between mt-4">
-                <button type="submit" className="px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Sign Up</button>
+                <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-gray capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Sign Up</button>
                 {error && <p className="text-red-500">{error}</p>}
               </div>
               <Footer />
@@ -103,8 +105,8 @@ function Signup() {
           </div>
         </div>
       </div>
-      </div>
-    );
+    </div>
+  );
 
 
 }

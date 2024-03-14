@@ -46,8 +46,8 @@ const FeaturedContent = () => {
         {featuredBooks.map((book) => (
           <div key={book.id}>
             <img className='' src={book.image} alt={book.title} />
-            <h3 className='font-bold'>{book.title}</h3>
-            <p  className='font-semibold'>{book.description}</p>
+            <h3 className='font-bold font-serif font'>{book.title}</h3>
+            <p  className='font-semibold font-mono'>{book.description}</p>
           </div>
         ))}
       </Slider>

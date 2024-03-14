@@ -9,7 +9,7 @@ import axios from "axios";
 
 function BookListDetailPage() {
 
-    const API_URL = "http://localhost:5005";
+    const API_URL = "https://books-recommendation-server.onrender.com";
 
 
 
@@ -58,8 +58,8 @@ function BookListDetailPage() {
                                 <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Ratings: {books.ratings}</p>
                             </div>
                             <div className="flex justify-between mt-10 px-6">
-                                <Link to="/booklistpage"><button className="btn btn-outline btn-accent px-4 py-2 rounded">&#9664; Back</button></Link>
-                                <Link to={`/deletebookpage/${books._id}`}><button className="btn btn-outline btn-success px-6 py-2 rounded">Delete Book</button></Link>
+                                <Link to="/booklistpage"><button className="btn btn-outline btn-accent px-4 py-2 rounded-xl">&#9664; Back</button></Link>
+                                <Link to={`/deletebookpage/${books._id}`}><button className="btn btn-outline btn-success px-6 py-2 rounded-xl">Delete Book</button></Link>
                             </div>
                             <Footer />
                         </div>

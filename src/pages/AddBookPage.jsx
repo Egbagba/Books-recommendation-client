@@ -14,7 +14,7 @@ function AddBookPage() {
     const [ratings, setRatings] = useState("");
     const [image, setImage] = useState("");
 
-    const API_URL = "http://localhost:5005";
+    const API_URL = "https://books-recommendation-server.onrender.com";
     const navigate = useNavigate();
 
     function handleSubmit(e) {
@@ -139,8 +139,8 @@ function AddBookPage() {
                     </div>
                 </div>
             </div>
-            </div>
-        );
+        </div>
+    );
 }
 
 export default AddBookPage;

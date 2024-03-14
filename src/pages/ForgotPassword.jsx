@@ -6,7 +6,7 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [resetRequested, setResetRequested] = useState(false);
 
-  const API_URL = "http://localhost:5005";
+  const API_URL = "https://books-recommendation-server.onrender.com";
 
 
   const handleSubmit = (e) => {
