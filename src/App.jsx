@@ -21,7 +21,7 @@ function App() {
   const [user, setUser] = useState(true);
 
   return (
-    <main>.
+    <main>
       <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />

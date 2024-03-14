@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import UserPage from "./UserPage";
-import { Link } from "react-router-dom";
 
 function BookListPage() {
   const API_URL = "https://books-recommendation-server.onrender.com";

@@ -44,15 +44,15 @@ function About() {
                     <UserPage />
                 </div>
                 <div>
-                    <h3 className="text-xl font-serif font-bold m-20">Welcome to our Book Recommendation Web Application!</h3>
+                    <h3 className="text-xl font-serif font-bold m-20 inline-block align-middle ">Welcome to our Book Recommendation Web Application!</h3>
                 </div>
-                <div className="break-all">
-                <div className="mt-8 text-center font-mono mb-10 text-gray text-2xl semibold" >
+                <div>
+                <div className="break-all mt-8 text-justify font-mono mb-10 text-gray text-2xl semibold" >
                     <p>Here, we are dedicated to creating an immersive literary
                         experience tailored just for you. Our platform is designed
                         to foster a love for reading by providing personalized book
                         recommendations that align with your unique preferences.</p>
-                    <br />
+                        
                     <p>The About Page is a glimpse into our mission,values, and the dedicated team behind the scenes. Feel free to explore
                         and connect with us as we embark on this literary adventure together.
                         Happy reading!
