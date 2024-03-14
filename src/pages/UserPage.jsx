@@ -21,9 +21,9 @@ const UserPage = () => {
         <div>
             {isLoggedIn && (
                 <>
-                    <h3>Welcome, {user ? user.username : 'Guest'}!</h3>
+                    <h3 className='font-bold'>Welcome</h3>
                     {/* Toggle Dropdown Button */}
-                    <button onClick={toggleDropdown}>
+                    <button className='btn btn-outline' onClick={toggleDropdown}>
                         User Information {user ? user.username : ''}
                     </button>
                     
@@ -33,8 +33,8 @@ const UserPage = () => {
                         <div>
                             {user && (
                                 <>
-                                    <p>Username: {user.name}</p>
-                                    <p>Email: {user.email}</p>
+                                    <p className='font-semibold'>Username: {user.name}</p>
+                                    <p className='font-semibold'>Email: {user.email}</p>
                                     
                                 </>
                                 

@@ -11,23 +11,23 @@ function Navbar() {
   };
 
   return (
-    <nav>
-      <div className='navbar bg-base-100'>
-      <Link to="/"><button className='btn btn-ghost text-l text-gray font-bold'>Home</button></Link>
+    <nav className='mb-5 py-2 px-2 fixed top-0 left-0'>
+      <div className='text-gray bg-ivory navbar space-x-4'>
+      <Link to="/"><button className='btn btn-ghost text-l text-slate-600 font-bold'>Home</button></Link>
 
       {isLoggedIn && (
         <>
-          <Link to="/About"><button className='text-gray font-bold btn btn-ghost text-l'>About</button></Link>
+          <Link to="/About"><button className='text-gray font-bold btn btn-ghost text-l text-slate-600'>About</button></Link>
 
           {/*   UPDATE   */}
-          <button className='text-gray font-bold btn btn-ghost text-l' onClick={handleLogout}>Logout</button>
+          <button className='text-gray font-bold btn btn-ghost text-l text-slate-600' onClick={handleLogout}>Logout</button>
         </>
       )}
 
       {!isLoggedIn && (
         <>
-          <Link to="/signup"> <button>Sign Up</button> </Link>
-          <Link to="/login"> <button>Login</button> </Link>
+          <Link to="/signup"> <button className='text-gray font-bold btn btn-ghost text-l text-slate-600'>Sign Up</button> </Link>
+          <Link to="/login"> <button className='text-gray font-bold btn btn-ghost text-l text-slate-600'>Login</button> </Link>
         </>
       )}
       </div>

@@ -17,32 +17,20 @@ function BookListPage() {
     <div>
       {books &&
         books.map((book) => (
-          <div key={book._id}>
-            <div>
-              {/* <div>
-                <img
-                  src="https://macmillan-dam.captureweb.co.uk/cdn/macmillan/previews/439664/d2600cec4c0f09bf8e6187a83a066343/0/14665546cf5662d409143d004ffc0c54/131898933.jpg"
-                  alt="card-image"
-                />
-              </div> */}
-              <div>
-                <h3>{book.title}</h3>
-                {/* <p>{book.author}</p>
-                <p>{book.description}</p>
-                <p>{book.year}</p>
-                <p>{book.ratings}</p> */}
-{/*                 <p>{book.image_placeholder}</p> I WANT THIS IMAGE TO APPEAR ONLY FROM THE BOOKLISTDETAILPAGE
- */}              </div>
-              <div>
-                <Link to={`/books/${book._id}`}>
-                  <button>See Book</button>
-                </Link>
-              </div>
+          <div key={book._id} className="flex flex-row items-center">
+            <div className="card w-80 mb-1 bg-neutral text-neutral-content">
+              <h3 className="card-title font-semibold mt-3">{book.title}</h3>
+            </div>
+            <div className="card-actions justify-center">
+              <Link to={`/books/${book._id}`}>
+                <button className="btn btn-outline btn-success mb-3">See Book</button>
+              </Link>
             </div>
           </div>
         ))}
     </div>
   );
+  
 }
 
 export default BookListPage;

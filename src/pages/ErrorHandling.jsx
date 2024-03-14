@@ -8,7 +8,7 @@ function ErrorHandling() {
         <h1>Page not found</h1>
         <p>Sorry, we couldn’t find the page you’re looking for.</p>
         <div>
-          <Link to={`/`}>Go back home</Link>
+          <Link to={`/`}><button className="btn btn-error">Go back home</button></Link>
         </div>
       </div>
     </main>

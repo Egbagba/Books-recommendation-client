@@ -27,7 +27,9 @@ function About() {
          </div> */
     return (
         <div className='bg-[url("https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen'>
-            <h3 className=" text-center text-white font-bold mt-5 mb-20">Welcome to our Book Recommendation Web Application!</h3>
+            <div>
+            <h3 className="text-xl m-20">Welcome to our Book Recommendation Web Application!</h3>
+            </div>
 
             <div className="mt-8 text-center mb-10 text-white text-3xl semibold" >
                 <p>Here, we are dedicated to creating an immersive literary
@@ -44,7 +46,7 @@ function About() {
             <div>
                 <a href={`${"https://github.com/Egbagba"}`} target="_blank"><button>Ese Egbagba</button></a>
                 <a href={`${"https://github.com/Andr3L4"}`} target="_blank"><button>Andre SR</button></a>
-            <div className="mt-6 footer footer-center">
+            <div className="mt-20 footer footer-center">
             < Footer />
             </div>     
             </div>

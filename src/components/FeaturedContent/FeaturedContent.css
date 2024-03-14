@@ -11,14 +11,14 @@
 }
 
 .slick-slide {
-  margin-bottom: 500px;
+  margin-bottom: 50px;
   background-color: #07677063;
 }
 
 /* Add the slide dots styles */
 .slick-dots {
   position: absolute;
-  bottom: 460px;
+  bottom: 20px;
   width: 100%;
   list-style: none;
   text-align: center;

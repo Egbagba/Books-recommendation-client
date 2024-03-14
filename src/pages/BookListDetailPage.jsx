@@ -39,8 +39,10 @@ function BookListDetailPage() {
                     <p>Description: {books.description}</p>
                     <p>Year: {books.year}</p>
                     <p>Ratings: {books.ratings}</p>
-                    <Link to="/booklistpage"><button>&#9664; Back</button></Link>
-                    <Link to={`/deletebookpage/${books._id}`}><button>Delete Book</button></Link>
+                    <div className="flex justify-center space-x-4">
+                    <Link to="/booklistpage"><button className="btn btn-outline btn-accent px-4 py-2 rounded">&#9664; Back</button></Link>
+                    <Link to={`/deletebookpage/${books._id}`}><button className="btn btn-outline btn-success">Delete Book</button></Link>
+                </div>
                 </div>
             )}
         </div>

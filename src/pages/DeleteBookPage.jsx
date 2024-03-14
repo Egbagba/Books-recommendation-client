@@ -56,13 +56,17 @@ const DeleteBookPage = () => {
                     <p>Ratings: {book.ratings}</p>
                     <img src={book.image_placeholder} alt={book.image} />
                 </div>
-                 <button onClick={deleteBook}>Confirm Delete</button>
+                <div className='flex justify-center space-x-4 mt-2'>  
+                 <button className="btn btn-active" onClick={deleteBook}>Confirm Delete</button>
                  {deleteStatus && <p>{deleteStatus}</p>}
-                 <Link to="/booklistpage"><button>&#9664; Back</button></Link>
-                 <Link to={`/updatebookpage/${book._id}`}><button>Update Book</button></Link> 
+                 <Link to="/booklistpage"><button className="btn btn-outline">&#9664; Back</button></Link>
+                 <Link to={`/updatebookpage/${book._id}`}><button className="btn btn-warning">Update Book</button></Link> 
+                 </div>
+
                  </article>
             }
         </div>
+        
     );
 };
 

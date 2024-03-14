@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Footer from "../components/Footer";
 
 
 function UpdateBookPage() {
@@ -8,7 +9,7 @@ function UpdateBookPage() {
     const [author, setAuthor] = useState("");
     const [description, setDescription] = useState("");
     const [year, setYear] = useState("");
-    const [rating, setRating] = useState("");
+    const [ratings, setRatings] = useState("");
     const [url, setUrl] = useState("");
     const { id } = useParams();
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ function UpdateBookPage() {
                 setAuthor(response.data.author);
                 setDescription(response.data.description);
                 setYear(response.data.year);
-                setRating(response.data.rating);
+                setRatings(response.data.ratings);
                 setUrl(response.data.url);
             })
             .catch((error) => console.log(error));
@@ -32,7 +33,7 @@ function UpdateBookPage() {
     }, [id]);
     const handleSubmit = (e) => {
         e.preventDefault();
-        const updatedBook = { title, author, description, year, rating, url };
+        const updatedBook = { title, author, description, year, ratings, url };
         axios.put(`${API_URL}/api/books/${id}`, updatedBook)
             .then(() => {
                 navigate("/booklistpage");
@@ -41,57 +42,102 @@ function UpdateBookPage() {
                 console.log(error);
             });
     };
+
+
     return (
-        <article>
-            <form onSubmit={handleSubmit}>
-                <label>Title</label>
-                <input
-                    type="text"
-                    name="title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                />
-                <label>Author</label>
-                <input
-                    type="text"
-                    name="author"
-                    value={author}
-                    onChange={(e) => setAuthor(e.target.value)}
-                />
-                <label>Description</label>
-                <input
-                    type="text"
-                    name="description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                />
-                <label>Year</label>
-                <input
-                    type="text"
-                    name="year"
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
-                />
-                <label>Ratings</label>
-                <input
-                    type="text"
-                    name="rating"
-                    value={rating}
-                    onChange={(e) => setRating(e.target.value)}
-                />
-                <label>Image URL</label>
-                <input
-                    type="text"
-                    name="url"
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                />
-                <button type="submit">Update Book</button>
-            </form>
-            <button onClick="">Delete Book</button>
-        </article>
+
+         
+        <div className="flex justify-center items-center min-h-screen ">
+            <div className="w-full max-w-lg mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 shadow-lg hover:shadow-xl">
+                <div className="px-6 py-4">
+                    <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Update Book</h3>
+                    <form onSubmit={handleSubmit} className="mt-4">
+                        <div className="w-full">
+                            <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                Book Title:
+                                <input
+                                    id="bookTitle"
+                                    type="text"
+                                    value={title}
+                                    onChange={(e) => setTitle(e.target.value)}
+                                    className="border border-gray-300 rounded w-full px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="w-full">
+                            <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                Author:
+                                <input
+                                    id="bookAuthor"
+                                    type="text"
+                                    value={author}
+                                    onChange={(e) => setAuthor(e.target.value)}
+                                    className="border border-gray-300 rounded w-full px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="w-full">
+                            <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                Description:
+                                <textarea
+                                    id="bookDescription"
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    className="border border-gray-300 rounded w-full px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="w-full">
+                            <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                Year:
+                                <input
+                                    id="bookYear"
+                                    type="text"
+                                    value={year}
+                                    onChange={(e) => setYear(e.target.value)}
+                                    className="border border-gray-300 rounded w-full px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="w-full">
+                            <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                Ratings:
+                                <input
+                                    id="bookRatings"
+                                    type="text"
+                                    value={ratings}
+                                    onChange={(e) => setRatings(e.target.value)}
+                                    className="border border-gray-300 rounded w-full px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="w-full">
+                            <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                Book URL:
+                                <input
+                                    id="bookImage"
+                                    type="text"
+                                    value={url}
+                                    onChange={(e) => setUrl(e.target.value)}
+                                    className="border border-gray-300 rounded w-full px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Update Book</button>
+                    </form>
+                    <Footer/>
+                </div>
+            </div>
+        </div>
     );
 }
+
 export default UpdateBookPage;
 
 

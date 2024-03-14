@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import FeaturedContent from "../components/FeaturedContent/FeaturedContent";
 import UserPage from "../pages/UserPage"; // Import UserPage
 import Footer from "../components/Footer";
+import '../index.css'
 
 function HomePage() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -46,21 +47,30 @@ function HomePage() {
       >
         <UserPage user={user} />
       </div>
-      <FeaturedContent />
-      <h2 className=" text-3xl m-60">Discover Your Next Favorite Read with Our Book Recommendations</h2>
-
-      <p className="mb-20">Immerse yourself in captivating stories and timeless classics with
-        our curated book recommendations. Whether you're a fan of romance,
-        mystery, or historical fiction, our carefully selected list has something
-        for every avid reader. Explore the literary world and embark on exciting
-        journeys through the pages of our recommended books
-      </p>
-
-      <button onClick={handleBooksRecommended}>Recommended Books</button>
-      <button onClick={handleAddBookClick}>{isAddBookVisible ? 'Hide' : 'Add +'}</button>
-      <Footer />
+      <div className="background-colo">
+        <div>
+          <FeaturedContent />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold m-60 mt-20">Discover Your Next Favorite Read with Our Book Recommendations</h2>
+        </div>
+        <div>
+          <p className="text-xl font-semibold m-20">Immerse yourself in captivating stories and timeless classics with
+            our curated book recommendations. Whether you're a fan of romance,
+            mystery, or historical fiction, our carefully selected list has something
+            for every avid reader. Explore the literary world and embark on exciting
+            journeys through the pages of our recommended books
+          </p>
+        </div>
+        <div className="flex justify-center space-x-10">
+          <button className="btn btn-outline btn-warning px-4 py-4 rounded" onClick={handleBooksRecommended}>Recommended Books</button>
+          <button className="btn btn-outline btn-info px-4 py-2 rounded" onClick={handleAddBookClick}>{isAddBookVisible ? 'Hide' : 'Add +'}</button>
+        </div>
+        <Footer />
+      </div>
     </div>
   );
+  
 }
 
 export default HomePage;
