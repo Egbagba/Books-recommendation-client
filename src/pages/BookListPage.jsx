@@ -15,7 +15,7 @@ function BookListPage() {
   }, []);
 
   return (
-    <div className="flex flex-wrap space-between">
+    <div className="flex flex-wrap justify-between">
       {books &&
         books.map((book) => (
           <div key={book._id}>
