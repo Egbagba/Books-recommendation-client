@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import { useState } from 'react';
 import Signup from './pages/Signup'
-import HomePage from './pages/Homepage';
 import BookListPage from './pages/BookListPage'
 import Login from './pages/Login'
 import Navbar from './components/Navbar'
@@ -16,6 +15,7 @@ import DeleteBookPage from './pages/DeleteBookPage'
 import Footer from './components/Footer'
 import UserPage from './pages/UserPage'
 import UpdateBookPage from './pages/UpdateBookPage';
+import HomePage from './pages/Homepage'
 
 function App() {
   const [user, setUser] = useState(true);
