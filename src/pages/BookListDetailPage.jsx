@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import UserPage from "./UserPage";
+import Footer from "../components/Footer";
 
 /* Import Axios */
 import axios from "axios";
@@ -47,18 +48,25 @@ function BookListDetailPage() {
                         >
                             <UserPage />
                         </div>
-                        <h3>Title: {books.title}</h3>
-                        <img src={books.image_placeholder} alt={books.image} />
-                        <p>Author: {books.author}</p>
-                        <p>Description: {books.description}</p>
-                        <p>Year: {books.year}</p>
-                        <p>Ratings: {books.ratings}</p>
-                        <div className="flex justify-center space-x-4">
-                            <Link to="/booklistpage"><button className="btn btn-outline btn-accent px-4 py-2 rounded">&#9664; Back</button></Link>
-                            <Link to={`/deletebookpage/${books._id}`}><button className="btn btn-outline btn-success">Delete Book</button></Link>
+                        <div className="w-full max-w-sm overflow-hidden bg-gray rounded-lg shadow-lg dark:bg-gray-800">
+                            <h3 className="mx-3 mt-2 font-semibold text-black mb-5 text-2xl">Title: {books.title}</h3>
+                            <img className="object-cover object-center w-full h-80" src={books.image_placeholder} alt={books.image} />
+                            <div className="px-6 py-4 text-start mt-3">
+                                <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Author: {books.author}</p>
+                                <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Description: {books.description}</p>
+                                <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Year: {books.year}</p>
+                                <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Ratings: {books.ratings}</p>
+                            </div>
+                            <div className="flex justify-between mt-10 px-6">
+                                <Link to="/booklistpage"><button className="btn btn-outline btn-accent px-4 py-2 rounded">&#9664; Back</button></Link>
+                                <Link to={`/deletebookpage/${books._id}`}><button className="btn btn-outline btn-success px-6 py-2 rounded">Delete Book</button></Link>
+                            </div>
+                            <Footer />
                         </div>
+
                     </div>
                 </div>
+
             )}
         </div>
     );

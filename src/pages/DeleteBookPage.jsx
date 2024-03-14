@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import UserPage from './UserPage';
+import Footer from '../components/Footer'
 
 const DeleteBookPage = () => {
     const API_URL = "http://localhost:5005";
@@ -44,8 +45,6 @@ const DeleteBookPage = () => {
 
     return (
         <div>
-            <h2>Delete Book</h2>
-
             {book &&
                 <article>
                     <div>
@@ -62,26 +61,34 @@ const DeleteBookPage = () => {
                             >
                                 <UserPage />
                             </div>
-                            <h3>Book Details</h3>
-                            <p>Title: {book.title}</p>
-                            <p>Author: {book.author}</p>
-                            <p>Description: {book.description}</p>
-                            <p>Year: {book.year}</p>
-                            <p>Ratings: {book.ratings}</p>
-                            <img src={book.image_placeholder} alt={book.image} />
+                            <div className="w-full max-w-sm overflow-hidden bg-gray rounded-lg shadow-lg dark:bg-gray-800">
+                                <div>
+                                    <div className="px-6 py-4 text-start mt-3">
+                                        <h3 className="mx-3 mt-2 font-bold text-black mb-5 text-2xl">Book Detail-Informations</h3>
+                                        <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Title: {book.title}</p>
+                                        <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Author: {book.author}</p>
+                                        <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Description: {book.description}</p>
+                                        <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Year: {book.year}</p>
+                                        <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Ratings: {book.ratings}</p>
+                                        <img className="object-cover object-center w-full h-80" src={book.image_placeholder} alt={book.image} />
+                                        <p className='font-semibold mt-7'>Please click on the confirm to delete book or update <hr/> </p>
+                                    </div>
+                                    <div className='flex justify-center space-x-4 mt-10'>
+                                        <button className="btn btn-active" onClick={deleteBook}>Confirm Delete</button>
+                                        {deleteStatus && <p>{deleteStatus}</p>}
+                                        <Link to="/booklistpage"><button className="btn btn-outline">&#9664; Back</button></Link>
+                                        <Link to={`/updatebookpage/${book._id}`}><button className="btn btn-warning">Update Book</button></Link>
+                                    </div>
+                                    <Footer />
+                                </div>
+                            </div>
                         </div>
-                        <div className='flex justify-center space-x-4 mt-2'>
-                            <button className="btn btn-active" onClick={deleteBook}>Confirm Delete</button>
-                            {deleteStatus && <p>{deleteStatus}</p>}
-                            <Link to="/booklistpage"><button className="btn btn-outline">&#9664; Back</button></Link>
-                            <Link to={`/updatebookpage/${book._id}`}><button className="btn btn-warning">Update Book</button></Link>
-                        </div>
-                        </div>
+                    </div>
 
                 </article>
             }
         </div>
-        
+
 
     );
 };

@@ -40,7 +40,7 @@ function AddBookPage() {
         <div className="flex justify-center items-center min-h-screen">
             <div className="w-full max-w-lg mx-auto overflow-hidden bg-white rounded-lg dark:bg-gray-800 shadow-lg hover:shadow-xl">
                 <div className="px-6 py-4">
-                    <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Add New Book</h3>
+                    <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Add New Book-Collection</h3>
                     <div style={{ position: 'relative' }}>
                         <div
                             style={{
@@ -56,7 +56,7 @@ function AddBookPage() {
                         </div>
                         <form onSubmit={handleSubmit} className="mt-4">
                             <div className="w-full">
-                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-serif">
                                     Book Title:
                                     <input
                                         id="bookTitle"
@@ -69,7 +69,7 @@ function AddBookPage() {
                                 </label>
                             </div>
                             <div className="w-full">
-                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-sans">
                                     Author:
                                     <input
                                         id="bookAuthor"
@@ -82,7 +82,7 @@ function AddBookPage() {
                                 </label>
                             </div>
                             <div className="w-full">
-                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-mono">
                                     Description:
                                     <textarea
                                         id="bookDescription"
@@ -95,7 +95,7 @@ function AddBookPage() {
                                 </label>
                             </div>
                             <div className="w-full">
-                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-serif">
                                     Year:
                                     <input
                                         id="bookYear"
@@ -108,7 +108,7 @@ function AddBookPage() {
                                 </label>
                             </div>
                             <div className="w-full">
-                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-sans">
                                     Ratings:
                                     <input
                                         id="bookRatings"
@@ -121,7 +121,7 @@ function AddBookPage() {
                                 </label>
                             </div>
                             <div className="w-full">
-                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300">
+                                <label className="block px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-mono">
                                     Book URL:
                                     <input
                                         id="bookImage"
@@ -133,7 +133,7 @@ function AddBookPage() {
                                     />
                                 </label>
                             </div>
-                            <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Add Book</button>
+                            <button type="submit" className="px-6 py-2 mt-4 text-sm font-medium tracking-wide text-gray capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Add Book</button>
                         </form>
                         <Footer />
                     </div>
