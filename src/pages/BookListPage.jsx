@@ -15,10 +15,10 @@ function BookListPage() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-wrap">
       {books &&
         books.map((book) => (
-          <div key={book._id} className="flex ">
+          <div key={book._id}>
             <div style={{ position: 'relative' }}>
               <div
                 style={{
