@@ -44,10 +44,10 @@ function About() {
                     <UserPage />
                 </div>
                 <div>
-                    <h3 className="text-xl font-serif font-bold m-20 inline-block align-middle ">Welcome to our Book Recommendation Web Application!</h3>
+                    <h3 className="text-rose-60 text-xl font-serif font-bold m-20 inline-block align-middle ">Welcome to our Book Recommendation Web Application!</h3>
                 </div>
                 <div>
-                <div className="break-all mt-8 inline-block align-bottom font-serif mb-10 text-gray text-2xl semibold" >
+                <div className="break-all mt-8 inline-block align-bottom font-serif mb-10 text-gray text-left text-xl semibold" >
                     <p>Here, we are dedicated to creating an immersive literary
                         experience tailored just for you. Our platform is designed
                         to foster a love for reading by providing personalized book
