@@ -46,7 +46,7 @@ function About() {
                 <div>
                     <h3 className="text-xl font-serif font-bold m-20">Welcome to our Book Recommendation Web Application!</h3>
                 </div>
-
+                <div className="break-all">
                 <div className="mt-8 text-center font-mono mb-10 text-gray text-2xl semibold" >
                     <p>Here, we are dedicated to creating an immersive literary
                         experience tailored just for you. Our platform is designed
@@ -66,6 +66,7 @@ function About() {
                         <div className="mt-20 footer footer-center">
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             < Footer />

@@ -57,19 +57,24 @@ const ResetPassword = () => {
         >
           <UserPage />
         </div>
-        <label>New Password:</label>
-        <input
-          type="password"
-          id="newPassword"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-        />
-        <button onClick={handleResetPassword}>Reset Password</button>
+        <div className='px-6 py-4'>
+        <div className='flex justify-center mx-auto'>
+        <div className='w-full mt-4'>
+              <label className='block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-gray border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300 text-start font-bold'>New Password:</label>
+              <input
+                type="password"
+                id="newPassword"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}/>
+              <button className="btn btn-accent rounded-xl" onClick={handleResetPassword}>Reset Password</button>
 
-        {resetStatus && <p>{resetStatus}</p>}
+              {resetStatus && <p>{resetStatus}</p>}
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    );
+    </div>
+  );
 };
 
 export default ResetPassword;

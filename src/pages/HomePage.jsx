@@ -54,10 +54,9 @@ function HomePage() {
         <div>
           <h2 className="text-3xl font-bold font-serif m-60 mt-20 text-stone-400">Discover Your Next Favorite Read with Our Book Recommendations</h2>
         </div>
-        <div>
+        <div className="break-all">
           <p className="text-xl font-semibold font-mono m-20 text-purple-900">Immerse yourself in captivating stories and timeless classics with
             our curated book recommendations. 
-            <br/>
             Whether you're a fan of romance,mystery, or historical fiction, our carefully selected list has something
             for every avid reader. Explore the literary world and embark on exciting
             journeys through the pages of our recommended books below.

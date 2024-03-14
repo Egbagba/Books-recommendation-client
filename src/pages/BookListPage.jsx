@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import UserPage from "./UserPage";
+import { Link } from "react-router-dom";
 
 function BookListPage() {
   const API_URL = "https://books-recommendation-server.onrender.com";
@@ -40,6 +41,9 @@ function BookListPage() {
                   <Link to={`/books/${book._id}`}>
                     <button className="btn btn-outline btn-success mb-3">See Book</button>
                   </Link>
+                </div>
+                <div className="">
+                <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
                 </div>
               </div>
             </div>
