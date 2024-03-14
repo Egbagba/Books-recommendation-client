@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import { useState } from 'react';
 import Signup from './pages/Signup'
-import HomePage from './pages/Homepage'
+import HomePage from './pages/Homepage';
 import BookListPage from './pages/BookListPage'
 import Login from './pages/Login'
 import Navbar from './components/Navbar'
