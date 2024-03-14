@@ -41,11 +41,11 @@ function BookListPage() {
                     <button className="btn btn-outline btn-success mb-3">See Book</button>
                   </Link>
                 </div>
-                <div className="">
-                <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
-                </div>
               </div>
             </div>
+            <button>
+            <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
+            </button>
           </div>
         ))}
     </div>
