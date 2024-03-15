@@ -30,7 +30,7 @@ function About() {
 
         <div className='bg-[url("https://images.pexels.com/photos/4219038/pexels-photo-4219038.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
 
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', minHeight: '100vh' }}>
                 <div
                     style={{
                         position: 'fixed',
@@ -59,7 +59,7 @@ function About() {
                     </p>
                 </div>
 
-                <div className="flex justify-between mt-10 px-6 absolute bottom-0 left-0 right-0">
+                <div className="flex justify-between mt-auto px-6 mb-20">
                     <div className="space-x-6 mt-20">
                         <a href={`${"https://github.com/Egbagba"}`}><button className="btn btn-outline btn-success">Ese Egbagba</button></a>
                         <a href={`${"https://github.com/Andr3L4"}`}><button className="btn btn-outline btn-warning">Andre SR</button></a>
