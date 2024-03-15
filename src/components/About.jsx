@@ -27,7 +27,7 @@ function About() {
          </div>    
          </div> */
     return (
-        <div className='bg-[url("https://images.pexels.com/photos/256514/pexels-photo-256514.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
+        <div className='bg-[url("https://images.pexels.com/photos/4207791/pexels-photo-4207791.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
 
             <div style={{ position: 'relative', minHeight: '80vh' }}>
                 <div
