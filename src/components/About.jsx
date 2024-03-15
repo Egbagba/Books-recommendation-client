@@ -59,8 +59,8 @@ function About() {
                     </p>
                 </div>
 
-                <div className="flex justify-between mt-auto px-6 mb-20">
-                    <div className="space-x-6 mt-20">
+                <div>
+                    <div className="space-x-6 mt-20 flex justify-between px-6">
                         <a href={`${"https://github.com/Egbagba"}`}><button className="btn btn-outline btn-success">Ese Egbagba</button></a>
                         <a href={`${"https://github.com/Andr3L4"}`}><button className="btn btn-outline btn-warning">Andre SR</button></a>
                         <div className="mt-20 footer footer-center">
