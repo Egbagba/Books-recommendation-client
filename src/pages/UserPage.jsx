@@ -35,7 +35,7 @@ const UserPage = () => {
                             {user && (
                                 <>
                                     <p className='font-semibold text-start'>Username: {user.name}</p>
-                                    <p className='font-semibold'>Email: {user.email}</p>
+                                    <p className='font-semibold text-start'>Email: {user.email}</p>
                                     <div className='mt-5 space-x-12'>
                                         <Link to="/signup"><button className="btn btn-sm btn-outline rounded-lg">Sign-Up</button></Link>
                                         <Link to="/login"><button className="btn btn-sm btn-outline rounded-lg">Log-In</button></Link>

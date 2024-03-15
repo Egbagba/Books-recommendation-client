@@ -40,7 +40,7 @@ const ForgotPassword = () => {
           >
             <UserPage />
           </div>
-          <p>Password reset instructions sent to your email. Check your inbox!</p>
+          <p className='text-stone-900 font-serif font-semibold text-lg'>Password reset instructions sent to your email. Check your inbox or spam folder!</p>
           {/* You might also want to provide a link to your login page */}
         </div>
       </div>
