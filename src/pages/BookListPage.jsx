@@ -44,8 +44,8 @@ function BookListPage() {
               </div>
             </div>
             <article className="fixed bottom-0 left-0 p-4">
-            <Link to={`/`}><button className="btn btn-outline rounded-xl">&#9670; Back</button></Link>
-            </article>
+{/*             <Link to={`/`}><button className="btn btn-outline rounded-xl">&#9670; Back</button></Link>
+ */}            </article>
           </div>
         ))}
     </div>
