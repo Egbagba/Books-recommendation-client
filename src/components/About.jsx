@@ -30,7 +30,7 @@ function About() {
 
         <div className='bg-[url("https://images.pexels.com/photos/4219038/pexels-photo-4219038.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
 
-            <div style={{ position: 'relative', minHeight: '100vh' }}>
+            <div style={{ position: 'relative', minHeight: '80vh' }}>
                 <div
                     style={{
                         position: 'fixed',

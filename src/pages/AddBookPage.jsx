@@ -38,7 +38,7 @@ function AddBookPage() {
 
     return (
         <div className="flex justify-center items-center min-h-screen">
-            <div className="w-full max-w-lg mx-auto overflow-hidden bg-white rounded-lg dark:bg-gray-800 shadow-lg hover:shadow-xl">
+            <div className="w-full max-w-lg mx-auto overflow-hidden bg-cyan-200 rounded-lg dark:bg-gray-800 shadow-lg hover:shadow-xl">
                 <div className="px-6 py-4">
                     <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Add New Book-Collection</h3>
                     <div style={{ position: 'relative' }}>
