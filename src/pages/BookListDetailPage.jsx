@@ -43,7 +43,7 @@ function BookListDetailPage() {
                                 right: 0,
                                 zIndex: 1,
                                 padding: '10px',
-                                background: 'white',
+                                background: 'stone',
                             }}
                         >
                             <UserPage />
