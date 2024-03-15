@@ -43,10 +43,10 @@ function About() {
                     <UserPage />
                 </div>
                 <div>
-                    <h3 className="text-stone-950 italic hover:not-italic text-2xl font-serif font-bold m-20 inline-block align-middle ">Welcome to our Book Recommendation Web Application!</h3>
+                    <h3 className="text-stone-950 text-3xl font-serif font-bold m-20 inline-block align-middle ">Welcome to our Book Recommendation Web Application!</h3>
                 </div>
                 <div>
-                    <div className="break-all italic my-8 ml-4 mr-4 inline-block align-bottom font-serif mb-10 text-zinc-900  text-left text-xl semibold" >
+                    <div className="break-all italic my-8 ml-4 mr-4 inline-block align-bottom font-serif mb-10 text-zinc-900  text-left text-2xl semibold" >
                         <p>Here, we are dedicated to creating an immersive literary
                             experience tailored just for you. Our platform is designed
                             to foster a love for reading by providing personalized book
@@ -57,9 +57,9 @@ function About() {
                             Happy reading!
                         </p>
                     </div>
-
+                    <p className="text-lg font-serif mt-20">Find us on Github</p>
                     <div>
-                        <div className="mt-auto px-6 pb-10">
+                        <div className="mt-20 px-6 pb-10">
                             <div className="space-x-6">
                                 <a href={`${"https://github.com/Egbagba"}`}><button className="btn btn-outline btn-success">Ese Egbagba</button></a>
                                 <a href={`${"https://github.com/Andr3L4"}`}><button className="btn btn-outline btn-warning">Andre SR</button></a>
