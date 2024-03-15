@@ -9,19 +9,19 @@ const FeaturedContent = () => {
   const featuredBooks = [
     {
       id: '65e89355255818943abbe850',
-      title: 'Gone with the Wind',
+      title: 'Fantastic Book',
       description: 'Epic romance set against the backdrop of the American Civil War.',
       image: 'https://mockupcloud-themety.imgix.net/uploads/images/2022/04/08/01-book-soft-cover-mockup.jpg?auto=compress,format&fit=crop,max&h=780&w=1170', // Replace with actual image path
     },
     {
       id: '65eec75f246c01d7a7528cfc',
-      title: 'Moongoose',
+      title: 'In Tune With The Infinite',
       description: 'Cross Origin Resource Sharing.',
       image: 'https://i.postimg.cc/qqH9KJsm/pexels-suzy-hazelwood-1130980.jpg', // Replace with actual image path
     },
     {
       id: '65eec75f246c01d7a7528cfc',
-      title: 'Lost In the Beauty of Bad Weather',
+      title: 'Law of Mongoose',
       description: 'Cross Origin Resource Sharing.',
       image: 'https://i.postimg.cc/28ztNX2B/pexels-tara-winstead-8850748.jpg',
     }

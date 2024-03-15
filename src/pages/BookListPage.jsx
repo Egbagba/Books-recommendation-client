@@ -44,7 +44,7 @@ function BookListPage() {
               </div>
             </div>
             <article className="fixed bottom-0 left-0 p-4">
-            <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
+            <Link to="/homepage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
             </article>
           </div>
         ))}

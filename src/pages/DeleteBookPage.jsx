@@ -71,7 +71,7 @@ const DeleteBookPage = () => {
                                         <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Year: {book.year}</p>
                                         <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Ratings: {book.ratings}</p>
                                         <img className="object-cover object-center w-full h-80" src={book.image_placeholder} alt={book.image} />
-                                        <p className='font-semibold mt-7'>Please click on the confirm to delete book or update <hr /> </p>
+                                        <p className='font-semibold from-orange-50 mt-7'>Please click on the confirm to delete book or update <hr /> </p>
                                     </div>
                                     <div className='flex justify-center space-x-4 mt-10'>
                                         <button className="btn btn-active rounded-xl" onClick={deleteBook}>Confirm Delete</button>

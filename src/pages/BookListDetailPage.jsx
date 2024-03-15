@@ -49,7 +49,7 @@ function BookListDetailPage() {
                             <UserPage />
                         </div>
                         <div className="w-full max-w-sm overflow-hidden bg-gray rounded-lg shadow-lg dark:bg-gray-800">
-                            <h3 className="mx-3 mt-2 font-semibold text-black mb-5 text-2xl">Title: {books.title}</h3>
+                            <h3 className="mx-3 mt-2 font-bold text-black mb-5 text-2xl">Title: {books.title}</h3>
                             <img className="object-cover object-center w-full h-80" src={books.image_placeholder} alt={books.image} />
                             <div className="px-6 py-4 text-start mt-3">
                                 <p className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Author: {books.author}</p>
