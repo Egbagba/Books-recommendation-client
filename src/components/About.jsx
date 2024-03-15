@@ -27,7 +27,7 @@ function About() {
          </div>    
          </div> */
     return (
-        <div className='bg-[url("https://images.pexels.com/photos/4219038/pexels-photo-4219038.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
+        <div className='bg-[url("https://images.pexels.com/photos/20522238/pexels-photo-20522238/free-photo-of-wax-candles-and-branches-with-blossoms-in-vase-on-table.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-cover bg-center full-screen w-76'>
 
             <div style={{ position: 'relative', minHeight: '80vh' }}>
                 <div
@@ -46,18 +46,18 @@ function About() {
                     <h3 className="text-stone-950 text-3xl font-serif font-bold m-20 inline-block align-middle ">Welcome to our Book Recommendation Web Application!</h3>
                 </div>
                 <div>
-                    <div className="break-all italic my-8 ml-4 mr-4 inline-block align-bottom font-serif mb-10 text-zinc-900  text-left text-2xl semibold" >
+                    <div className="break-all my-8 ml-5 mr-5 inline-block align-bottom font-serif mb-10 text-zinc-900  text-center text-2xl semibold" >
                         <p>Here, we are dedicated to creating an immersive literary
                             experience tailored just for you. Our platform is designed
                             to foster a love for reading by providing personalized book
                             recommendations that align with your unique preferences.</p>
-
+                            <br/>
                         <p>The About Page is a glimpse into our mission,values, and the dedicated team behind the scenes. Feel free to explore
                             and connect with us as we embark on this literary adventure together.
                             Happy reading!
                         </p>
                     </div>
-                    <p className="text-lg font-serif mt-20">Find us on Github</p>
+                    <p className="text-lg font-serif font-semibold mt-20">Find us on Github</p>
                     <div>
                         <div className="mt-20 px-6 pb-10">
                             <div className="space-x-6">
