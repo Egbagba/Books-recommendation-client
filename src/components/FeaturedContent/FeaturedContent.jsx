@@ -16,7 +16,7 @@ const FeaturedContent = () => {
     {
       id: '65eec75f246c01d7a7528cfc',
       title: 'In Tune With The Infinite',
-      description: 'Cross Origin Resource Sharing.',
+      description: 'The movie is based on the book "The Reincarnationist Papers" by D. Eric Maikranz.',
       image: 'https://i.postimg.cc/qqH9KJsm/pexels-suzy-hazelwood-1130980.jpg', // Replace with actual image path
     },
     {
@@ -42,12 +42,12 @@ const FeaturedContent = () => {
 
   return (
     <div className='feature-slide-img'>
-        <Slider {...settings}>
+      <Slider {...settings}>
         {featuredBooks.map((book) => (
           <div key={book.id}>
             <img className='' src={book.image} alt={book.title} />
             <h3 className='font-bold font-serif font'>{book.title}</h3>
-            <p  className='font-semibold font-mono'>{book.description}</p>
+            <p className='font-semibold font-mono'>{book.description}</p>
           </div>
         ))}
       </Slider>
