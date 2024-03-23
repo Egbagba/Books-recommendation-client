@@ -76,7 +76,7 @@ const DeleteBookPage = () => {
                                     <div className='flex justify-center space-x-4 mt-10'>
                                         <link to={`/`}><button className="btn btn-active rounded-xl" onClick={deleteBook}>Confirm Delete</button></link>
                                         {deleteStatus && <p>{deleteStatus}</p>}
-                                        <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
+                                        <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&hearts; Back</button></Link>
                                         <Link to={`/updatebookpage/${book._id}`}><button className="btn btn-warning rounded-xl">Update Book</button></Link>
                                     </div>
                                     <Footer />
