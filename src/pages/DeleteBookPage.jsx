@@ -74,7 +74,7 @@ const DeleteBookPage = () => {
                                         <p className='font-semibold from-orange-50 mt-7'>Please click on the confirm to delete book or update <hr /> </p>
                                     </div>
                                     <div className='flex justify-center space-x-4 mt-10'>
-                                        <link to={`/`}><button className="btn btn-active rounded-xl" onClick={deleteBook}>Confirm Delete</button></link>
+                                        <Link to={`/`}><button className="btn btn-active rounded-xl" onClick={deleteBook}>Confirm Delete</button></Link>
                                         {deleteStatus && <p>{deleteStatus}</p>}
                                         <Link to="/booklistpage"><button className="btn btn-outline rounded-xl">&#9664; Back</button></Link>
                                         <Link to={`/updatebookpage/${book._id}`}><button className="btn btn-warning rounded-xl">Update Book</button></Link>
